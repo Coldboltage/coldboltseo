@@ -1,0 +1,13 @@
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.firstImage {
+    height: 500px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

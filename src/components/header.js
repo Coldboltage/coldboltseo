@@ -1,35 +1,46 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import * as styles from "../styles/header.module.css"
+import NavLinks from "../components/Navlinks"
+import { StaticImage } from "gatsby-plugin-image"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const query = graphql `
+  {
+    allWpPost {
+      nodes {
+        link
+      }
+    }
+    allWpPage {
+      nodes {
+        title
+      }
+    }
+  }
+`
+
+const Header = ({ siteTitle }) => {
+  const data = useStaticQuery(query)
+  const {allWpPage: {nodes:pages}} = data
+  const links = pages.link
+
+  console.log(pages)
+  return (
+    <header>
+      <div className={styles.containment}>
+          <Link className={styles.link} to="/" style={{ color: `white`, textDecoration: `none`, }}>
+          <StaticImage 
+            src="../images/coldboltseologo-e1543939940324.png"
+            quality={95}
+            formats={["AUTO", "WEBP", "AVIF"]}
+          />
+          </Link>
+        <NavLinks pages={pages} links={links} />
+      </div>
+    </header>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

@@ -1,0 +1,22 @@
+.list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+li {
+    padding:0 20px;
+    margin: 0 !important;
+}
+
+.space {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.hello {
+    font-size: 20px;
+    margin: 0;
+}

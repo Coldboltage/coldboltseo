@@ -1,0 +1,21 @@
+header {
+    display: flex;
+    padding: 30px 0;
+}
+
+.containment {
+    margin: 0 auto ;
+    max-width: 1200px;
+    display: flex;
+    gap: 20px;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+h2 {
+    margin: 0 !important;
+}

@@ -1,0 +1,48 @@
+.firstImage {
+    margin-bottom: 40px;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.innerContainer {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.card {
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #333
+}
+
+.postsGap {
+    margin: 20px;
+}
+
+.postImage {
+    margin-bottom: 20px;
+    height: 350px;
+    border-radius: 5px;
+}
+
+.taxomonies {
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.link {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.date {
+    color: rgb(152, 152, 152);
+    text-decoration: none;
+    text-transform: uppercase;
+}
