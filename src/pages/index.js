@@ -74,7 +74,7 @@ export const query = graphql`
           node {
             localFile {
               childImageSharp {
-                gatsbyImageData(width: 1920, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED, quality: 95)
+                gatsbyImageData(width: 560, formats: [AUTO, WEBP, AVIF], placeholder: TRACED_SVG, quality: 50)
               }
             }
           }
