@@ -16,7 +16,7 @@ const FirstPostCard = ({image, data}) => {
             <div className={styles.innerContainer}>
                 <p>{`${name} - ${date}`}</p>
                 <h3>{title}</h3>
-                <p dangerouslySetInnerHTML={{__html:excerpt}}></p>
+                <div dangerouslySetInnerHTML={{__html: excerpt}}></div>
                 <Link to={`/${slug}`}>Read more</Link>
             </div>
         </div>
