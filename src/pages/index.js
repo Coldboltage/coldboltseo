@@ -9,11 +9,8 @@ import * as styles from "../styles/index.module.css"
 
 const IndexPage = ({ data }) => {
   const image = data.wpPost.featuredImage.node.localFile.childImageSharp.gatsbyImageData
-  console.log(data.allWpPost.nodes.length)
-  data.allWpPost.nodes.shift()
-  console.log(data.allWpPost.nodes.length + " done")
+  // data.allWpPost.nodes.shift()
   const posts = data.allWpPost.nodes
-  console.log(posts)
 
   return (
     <Layout>
@@ -59,6 +56,7 @@ export const query = graphql`
     allWpPost(
       filter: {categories: {nodes: {elemMatch: {name: {eq: "Esports SEO"}}}}}
       limit: 7
+      skip: 1
     ) {
       nodes {
         categories {
