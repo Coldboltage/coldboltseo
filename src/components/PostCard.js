@@ -22,9 +22,7 @@ const PostCard = ({ image, posts }) => {
                             <span><Link className={styles.link} to={`/${name}`}>{name}</Link></span><span> - </span><Link className={styles.date} to={`/${name}`}>{date}</Link>
                         </div>
                         <h3>{title}</h3>
-                        <div>
-                            <p dangerouslySetInnerHTML={{ __html: excerpt }}></p>
-                        </div>
+                        <div dangerouslySetInnerHTML={{ __html: excerpt }}></div>
                         <Link to={`/${slug}`}>Read more</Link>
                     </div>
                 )
