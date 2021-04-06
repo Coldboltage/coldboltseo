@@ -1,0 +1,26 @@
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.innerContainer {
+    width: 85% ;
+    margin: 0 auto;
+}
+
+/* CONTENT */
+
+.content {
+    margin-top: 40px;
+}
+
+.content p, .content ul {
+    line-height: 30px;
+}
+
+.content h1,
+.content h2,
+.content h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

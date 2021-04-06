@@ -12,7 +12,9 @@ const FirstPostCard = ({image, data}) => {
     console.log(categories.nodes[0].name)
     return (
         <div>
-            <GatsbyImage className={styles.firstImage} image={image} alt="first post" />
+            <Link to={`/${slug}`}>
+                <GatsbyImage className={styles.firstImage} image={image} alt="first post" />
+            </Link>
             <div className={styles.innerContainer}>
                 <p>{`${name} - ${date}`}</p>
                 <h3>{title}</h3>
