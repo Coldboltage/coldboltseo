@@ -6,8 +6,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import * as styles from "../styles/PostCard.module.css"
 
-const FirstPostCard = ({image, data}) => {
-    const {wpPost: {categories, date, title, excerpt, slug} } = data
+const FirstPostCard = ({ image, data }) => {
+    const { wpPost: { categories, date, title, excerpt, slug } } = data
     const name = categories.nodes[0].name
     console.log(categories.nodes[0].name)
     return (
@@ -16,9 +16,11 @@ const FirstPostCard = ({image, data}) => {
                 <GatsbyImage className={styles.firstImage} image={image} alt="first post" />
             </Link>
             <div className={styles.innerContainer}>
-                <p>{`${name} - ${date}`}</p>
+                <div className={styles.taxomonies}>
+                    <span><Link className={styles.link} to={`/${name}`}>{name}</Link></span><span> - </span><Link className={styles.date} to={`/${name}`}>{date}</Link>
+                </div>
                 <h3>{title}</h3>
-                <div dangerouslySetInnerHTML={{__html: excerpt}}></div>
+                <div dangerouslySetInnerHTML={{ __html: excerpt }}></div>
                 <Link to={`/${slug}`}>Read more</Link>
             </div>
         </div>

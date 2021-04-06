@@ -17,7 +17,7 @@ const Post = ({data}) => {
           <SEO title="post"/>
           <div className={styles.container}>
             <h1>{title}</h1>
-            <GatsbyImage image={image}/>
+            <GatsbyImage image={image} className={styles.postImage}/>
             <div className={`${styles.innerContainer} ${styles.content}`} dangerouslySetInnerHTML={{__html: content}}></div>
           </div>
         </Layout>
@@ -32,10 +32,10 @@ export const query = graphql`
           localFile {
             childImageSharp {
               gatsbyImageData(
-                width: 1920
+                width: 1200
                 formats: [AUTO, WEBP, AVIF]
-                placeholder: BLURRED
-                quality: 95
+                placeholder: TRACED_SVG
+                quality: 50
               )
               fluid {
                 src

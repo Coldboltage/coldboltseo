@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => {
         <p>Explaining what makes good SEO in Esports and Gaming.</p>
         <FirstPostCard image={image} data={data} />
         {/* <GatsbyImage className={styles.firstImage} image={image} alt="first post" /> */}
-        <div style={{margin: "20px"}}>
+        <div style={{marginTop: "40px", marginLeft: "20px", marginRight: "20px"}}>
           <PostCard image={image} posts={posts} />
         </div>
       </div>
@@ -35,7 +35,7 @@ export const query = graphql`
         node {
           localFile {
             childImageSharp {
-              gatsbyImageData(width: 1920, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED, quality: 95)
+              gatsbyImageData(width: 1920, formats: [AUTO, WEBP, AVIF], placeholder: TRACED_SVG, quality: 50)
               fluid {
                 src
               }

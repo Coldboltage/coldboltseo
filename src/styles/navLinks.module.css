@@ -5,8 +5,11 @@
 }
 
 li {
-    padding:0 20px;
-    margin: 0 !important;
+
+}
+
+li:hover {
+    text-decoration: underline;
 }
 
 .space {
@@ -17,6 +20,7 @@ li {
 }
 
 .hello {
-    font-size: 20px;
+    padding-right: 25px;
     margin: 0;
+    font-size: 15px;
 }
