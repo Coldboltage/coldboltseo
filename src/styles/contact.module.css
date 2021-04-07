@@ -1,0 +1,17 @@
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.firstImage {
+    height: 500px;
+}
+
+.grid {
+    display: grid;
+    gap: 100px;
+}
+
+.grid2 {
+    grid-template-columns: 2fr 1fr;
+}
