@@ -29,3 +29,7 @@
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+.content picture {
+    box-shadow: 5px 10px 8px #888888;
+}

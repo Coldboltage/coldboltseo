@@ -20,7 +20,7 @@ const PostCard = ({ image, posts }) => {
                                 <GatsbyImage className={styles.postImage} image={image} alt="first post" />
                             </Link>
                             <div className={styles.taxomonies}>
-                                <span><Link className={styles.link} to={`/${name}`}>{name}</Link></span><span> - </span><Link className={styles.date} to={`/${name}`}>{date}</Link>
+                                <span><Link className={styles.link} to={`/${slug}`}>{name}</Link></span><span> - </span><Link className={styles.date} to={`/${name}`}>{date}</Link>
                             </div>
                             <Link className={styles.titleLink} to={`/${slug}`}>
                                 <h3 className={styles.title}>{title}</h3>

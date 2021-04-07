@@ -14,17 +14,21 @@ exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
     // Search for something unique as an identifier
     const result = await graphql(`
-        query WordPressPosts {
-            allWpPost {
-            nodes {
-                slug
-                }
-            }
-        }      
+      query WordPressPosts {
+        allWpPost {
+          nodes {
+            slug
+          }
+        }
+        allWpCategory {
+          nodes {
+            slug
+          }
+        }
+      }      
     `)
     
     result.data.allWpPost.nodes.forEach(post => {
-        console.log(post.uri)
         // Function to create pages
         createPage({
           // The path to which the page will be created
@@ -35,6 +39,21 @@ exports.createPages = async ({ graphql, actions }) => {
           // Passing on information to the page as identifier. 
           context: {
             slug: post.slug,
+          },
+        })
+      })
+
+      result.data.allWpCategory.nodes.forEach(category => {
+        // Function to create pages
+        createPage({
+          // The path to which the page will be created
+          // path: `blog/${blog.frontmatter.slug}/`,
+          path: `/${category.slug}`,
+          // The template that will be used
+          component: path.resolve(`src/templates/category.js`),
+          // Passing on information to the page as identifier. 
+          context: {
+            slug: category.slug,
           },
         })
       })
