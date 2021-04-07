@@ -6,6 +6,8 @@
 
 // You can delete this file if you're not using it
 const path = require("path");
+const { paginate } = require('gatsby-awesome-pagination');
+
 
 // create pages dynamically
 // Process to grab createPages. Needs to be Async as it takes time to get.
@@ -38,24 +40,40 @@ exports.createPages = async ({ graphql, actions }) => {
           component: path.resolve(`src/templates/post.js`),
           // Passing on information to the page as identifier. 
           context: {
-            slug: post.slug,
+            slugPost: post.slug,
           },
         })
       })
 
-      result.data.allWpCategory.nodes.forEach(category => {
-        // Function to create pages
-        createPage({
-          // The path to which the page will be created
-          // path: `blog/${blog.frontmatter.slug}/`,
-          path: `/${category.slug}`,
-          // The template that will be used
-          component: path.resolve(`src/templates/category.js`),
-          // Passing on information to the page as identifier. 
-          context: {
-            slug: category.slug,
-          },
-        })
+      // result.data.allWpCategory.nodes.forEach(category => {
+      //   // Function to create pages
+      //   createPage({
+      //     // The path to which the page will be created
+      //     // path: `blog/${blog.frontmatter.slug}/`,
+      //     path: `/${category.slug}`,
+      //     // The template that will be used
+      //     component: path.resolve(`src/templates/category.js`),
+      //     // Passing on information to the page as identifier. 
+      //     context: {
+      //       slugCat: category.slug,
+      //     },
+      //   })
+      // })
+
+      paginate({
+        createPage,
+        items: result.data.allWpCategory.nodes,
+        itemsPerPage: 6,
+        pathPrefix: `/blog`,
+        component: path.resolve(`src/templates/blog.js`)
+      })
+
+      paginate({
+        createPage,
+        items: result.data.allWpCategory.nodes,
+        itemsPerPage: 6,
+        pathPrefix: `/esports-seo`,
+        component: path.resolve(`src/templates/category.js`)
       })
 
 }

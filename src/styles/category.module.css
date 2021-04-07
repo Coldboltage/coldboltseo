@@ -1,0 +1,23 @@
+/* HERO */
+.hero {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #eee;
+    margin-bottom: 60px;
+}
+
+.heroText {
+    margin: 0 auto;
+    width: 900px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.pager {
+    margin-top: 40px;
+    text-align: center;
+}

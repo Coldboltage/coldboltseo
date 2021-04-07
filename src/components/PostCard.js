@@ -4,9 +4,9 @@ import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import SEO from "./seo"
 import * as styles from "../styles/PostCard.module.css"
 
-const PostCard = ({ image, posts }) => {
+const PostCard = ({ image, posts, grid }) => {
     return (
-        <div className={styles.grid}>
+        <div className={`${styles.grid} ${grid && styles.grid2}`}>
             {posts.map((post, index) => {
                 // const {} = post
                 const { categories, date, title, excerpt, slug } = post
@@ -14,7 +14,7 @@ const PostCard = ({ image, posts }) => {
                 const image = post.featuredImage.node.localFile.childImageSharp.gatsbyImageData
                 console.log()
                 return (
-                    <div className={`${styles.card} ${styles.innerContainer}`}>
+                    <div className={`${styles.card} ${styles.innerContainer}`} key={index}>
                         <div>
                             <Link to={`/${slug}`}>
                                 <GatsbyImage className={styles.postImage} image={image} alt="first post" />

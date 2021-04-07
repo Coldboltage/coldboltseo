@@ -25,21 +25,18 @@ const Post = ({data}) => {
 }
 
 export const query = graphql`
-  query indexWordPressQuery($slug: String) {
-    wpPost(slug: {eq: $slug}) {
+  query indexWordPressQuery( $slugPost: String ) {
+    wpPost(slug: {eq: $slugPost}) {
       featuredImage {
         node {
           localFile {
             childImageSharp {
               gatsbyImageData(
-                width: 1200
+                width: 1920
                 formats: [AUTO, WEBP, AVIF]
                 placeholder: TRACED_SVG
-                quality: 50
+                quality: 40
               )
-              fluid {
-                src
-              }
             }
           }
         }

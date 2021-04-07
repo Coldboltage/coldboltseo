@@ -13,6 +13,19 @@
     box-shadow: 5px 10px 8px #888888;
 }
 
+/* HERO */
+.hero {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #eee;
+}
+
+.heroText {
+    margin: 0 auto;
+    width: 900px;
+}
+
 /* CONTENT */
 
 .content {

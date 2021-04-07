@@ -5,13 +5,13 @@ import SEO from "../components/seo"
 import * as styles from "../styles/category.module.css"
 import { GatsbyImage } from "gatsby-plugin-image"
 import PostCard from "../components/PostCard"
-import Pager from "../components/Pager"
 
-const Category = ({ data, pageContext }) => {
+const Category = ({ data }) => {
     const {allWpPost:{nodes:posts}} = data
+
     const image = data.allWpPost.nodes.featuredImage
+    console.log(data)
     const { wpCategory: { name, description } } = data
-    console.log(pageContext)
     return (
         <Layout>
             <div>
@@ -24,7 +24,6 @@ const Category = ({ data, pageContext }) => {
                 </div>
                 <div className={styles.container}>
                     <PostCard posts={posts} grid/>
-                    <Pager className={styles.pager} pageContext={pageContext} />
                 </div>
             </div>
         </Layout>
@@ -32,13 +31,13 @@ const Category = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-query categories ($skip: Int!, $limit: Int!) {
-    wpCategory(slug: {eq: "esports-seo"}) {
+query blogPage ($skip: Int!, $limit: Int!) {
+    wpCategory(slug: {eq: "blog"}) {
       name
       description
     }
     allWpPost(
-        filter: {categories: {nodes: {elemMatch: {slug: {eq: "esports-seo"}}}}}
+        filter: {categories: {nodes: {elemMatch: {slug: {eq: "blog"}}}}}
         sort: {fields: date, order: DESC}
         skip: $skip
         limit: $limit
@@ -58,7 +57,7 @@ query categories ($skip: Int!, $limit: Int!) {
             localFile {
               childImageSharp {
                 gatsbyImageData(
-                    width: 800
+                    width: 600
                     formats: [AUTO, WEBP, AVIF]
                     placeholder: TRACED_SVG
                     quality: 40

@@ -11,6 +11,9 @@
 
 .grid {
     display: grid;
+}
+
+.grid2 {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
 }

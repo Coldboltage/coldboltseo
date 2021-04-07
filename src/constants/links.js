@@ -9,7 +9,7 @@ export default [
     {
         id: 2,
         text: "Blog",
-        url: "/blogs/"
+        url: "/blog/"
     },
     {
         id: 3,
