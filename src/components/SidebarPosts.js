@@ -15,7 +15,7 @@ const SidebarPosts = ({ posts }) => {
                     <div key={index} className={styles.post}>
                         <h5 className={styles.titleLink}>{title}</h5>
                         <div className={styles.taxomonies}>
-                            <span><Link className={styles.link} to={`/${slug}`}>{catName}</Link></span><span> - </span><Link className={styles.date} to={`/${catName}`}>{date}</Link>
+                            <span><Link className={styles.link} to={`/${slug}`}>{catName}</Link></span><span> - </span><Link className={styles.date} to={`/${slug}`}>{date}</Link>
                         </div>
                     </div>
                 )

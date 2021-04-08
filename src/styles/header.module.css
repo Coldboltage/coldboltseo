@@ -1,6 +1,7 @@
 header {
     display: flex;
     padding: 30px 0;
+    margin-bottom: 20px;
 }
 
 .containment {

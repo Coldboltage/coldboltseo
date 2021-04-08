@@ -4,6 +4,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import * as styles from "../styles/header.module.css"
 import NavLinks from "../components/Navlinks"
 import { StaticImage } from "gatsby-plugin-image"
+import socialLinks from "../constants/socialLinks"
 
 const query = graphql `
   {
@@ -36,7 +37,7 @@ const Header = ({ siteTitle }) => {
             formats={["AUTO", "AVIF", "WEBP"]}
           />
           </Link>
-        <NavLinks pages={pages} links />
+        <NavLinks pages={pages} socialLinks={socialLinks} />
       </div>
     </header>
   )
