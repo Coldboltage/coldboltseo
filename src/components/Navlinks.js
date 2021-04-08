@@ -3,9 +3,7 @@ import {Link} from "gatsby"
 import * as styles from "../styles/navLinks.module.css"
 import linkList from "../constants/links"
 
-const NavLinks = ({ pages }) => {
-    const links = true;
-    console.log(linkList)
+const NavLinks = ({ pages, links }) => {
     return (
         <div className={styles.space}>
             <ul className={styles.list}>

@@ -1,0 +1,12 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+}
+
+.background {
+    background-color: rgba(238, 238, 238, 0.933);
+}
