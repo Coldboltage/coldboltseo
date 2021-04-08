@@ -11,7 +11,7 @@ const About = ({data}) => {
             <div className={styles.container}>
             <StaticImage
               className={styles.alanImage}
-              placeholder="blurred"
+              placeholder="tracedSVG"
               width= "1200"
               height="500"
               src="../images/alanprofile.jpg"
