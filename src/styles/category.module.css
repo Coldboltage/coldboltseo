@@ -9,7 +9,7 @@
 
 .heroText {
     margin: 0 auto;
-    width: 900px;
+    max-width: 900px;
 }
 
 .container {
@@ -20,4 +20,15 @@
 .pager {
     margin-top: 40px;
     text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+    .hero {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
 }

@@ -3,6 +3,12 @@
     max-width: 1200px;
 }
 
+.innerContainer {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 .firstImage {
     height: 500px;
 }
@@ -10,4 +16,19 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        padding: 0px 20px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .innerContainer {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
 }

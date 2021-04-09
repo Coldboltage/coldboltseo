@@ -41,3 +41,22 @@
     height: 300px;
     border: #999 1px solid;
 }
+
+@media only screen and (max-width: 1300px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .grid2 {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .textarea {
+        width: 400px;
+        max-width: 500px;
+    }
+}

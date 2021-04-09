@@ -16,7 +16,7 @@ const Post = ({data}) => {
         <Layout>
           <SEO title="post"/>
           <div className={styles.container}>
-            <h1>{title}</h1>
+            <h1 className={styles.title}>{title}</h1>
             <GatsbyImage image={image} className={styles.postImage}/>
             <div className={`${styles.innerContainer} ${styles.content}`} dangerouslySetInnerHTML={{__html: content}}></div>
           </div>

@@ -37,7 +37,7 @@ const Header = ({ siteTitle }) => {
             formats={["AUTO", "AVIF", "WEBP"]}
           />
           </Link>
-        <NavLinks pages={pages} socialLinks={socialLinks} />
+        <NavLinks className={styles.navLinks} pages={pages} socialLinks={socialLinks} />
       </div>
     </header>
   )

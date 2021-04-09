@@ -45,7 +45,7 @@ const Contact = ({ data }) => {
             </form>
           </div>
         </div>
-        <div>
+        <div className={styles.sidebar}>
           <h3>Latest Posts</h3>
           <SidebarPosts posts={posts} />
         </div>

@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => {
         <p>Explaining what makes good SEO in Esports and Gaming.</p>
         <FirstPostCard image={image} data={data} />
         {/* <GatsbyImage className={styles.firstImage} image={image} alt="first post" /> */}
-        <div style={{marginTop: "40px", marginLeft: "20px", marginRight: "20px"}}>
+        <div className={styles.innerContainer}>
           <PostCard image={image} posts={posts} grid/>
         </div>
       </div>

@@ -11,11 +11,11 @@ const About = ({data}) => {
             <div className={styles.container}>
             <StaticImage
               className={styles.alanImage}
-              placeholder="tracedSVG"
+              placeholder="blurred"
               width= "1200"
               height="500"
               src="../images/alanprofile.jpg"
-              quality={50}
+              quality={45}
               formats={["AUTO", "AVIF", "WEBP"]}
               transformOptions={{"cropFocus": "entropy"}}              
             />
