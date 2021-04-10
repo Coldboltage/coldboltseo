@@ -38,7 +38,7 @@ module.exports = {
         },
         url:
           process.env.WPGRAPHQL_URL ||
-          `https://coldboltseobackup.com/graphql`,
+          `https://coldboltseobackup.com/graphql/`,
       },
     },
     {
