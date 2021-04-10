@@ -35,7 +35,7 @@ module.exports = {
         // the only required plugin option for WordPress is the GraphQL url.
         url:
           process.env.WPGRAPHQL_URL ||
-          `https://coldboltseo.com/graphql`,
+          `https://fvs.5ec.myftpupload.com/graphql/`,
       },
     },
     {

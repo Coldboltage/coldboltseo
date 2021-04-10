@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   {
-    wpPost {
+    wpPost(categories: {nodes: {elemMatch: {slug: {eq: "esports-seo"}}}}) {
       featuredImage {
         node {
           localFile {
