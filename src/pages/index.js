@@ -7,6 +7,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import * as styles from "../styles/index.module.css"
 
+console.log("wee test")
+
 const IndexPage = ({ data }) => {
   const image = data.wpPost.featuredImage.node.localFile.childImageSharp.gatsbyImageData
   // data.allWpPost.nodes.shift()
