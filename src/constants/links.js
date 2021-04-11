@@ -19,6 +19,6 @@ export default [
     {
         id: 4,
         text: "About Us",
-        url: "/about-us"
+        url: "/about-us/"
     }
 ]
