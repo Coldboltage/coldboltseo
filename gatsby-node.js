@@ -77,10 +77,6 @@ exports.createPages = async ({ graphql, actions }) => {
       })
 
       // Creat redirects
-      createRedirect({
-        fromPath: "/category/blog/",
-        toPath: "/blog/",
-        isPermanent: true
-      })
-
+      createRedirect({ fromPath: "/category/blog/", toPath: "/blog/", isPermanent: true })
+      createRedirect({ fromPath: "/category/esports-seo/", toPath: "/esports-seo/", isPermanent: true })
 }
