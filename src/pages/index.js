@@ -7,8 +7,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import * as styles from "../styles/index.module.css"
 
-console.log("wee test")
-
 const IndexPage = ({ data }) => {
   const image = data.wpPost.featuredImage.node.localFile.childImageSharp.gatsbyImageData
   // data.allWpPost.nodes.shift()
@@ -16,7 +14,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Home" description={data.wpPage.seo.metaDesc} />
       <div className={styles.container}>
         <h1>Esports SEO advice for Esports and Gaming</h1>
         <p>Explaining what makes good SEO in Esports and Gaming.</p>
@@ -51,6 +49,12 @@ export const query = graphql`
       title
       slug
       excerpt
+    }
+    wpPage(slug: {eq: "homepage"}) {
+      title
+      seo {
+        metaDesc
+      }
     }
     allWpPost(
       filter: {categories: {nodes: {elemMatch: {name: {eq: "Esports SEO"}}}}}

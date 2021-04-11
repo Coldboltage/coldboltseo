@@ -8,13 +8,13 @@ import {GatsbyImage} from "gatsby-plugin-image"
 
 
 const Post = ({data}) => {
-  const {content, date, excerpt, slug, title} = data.wpPost;
+  const {content, date, excerpt, slug, title, seo:{title:seoTitle,metaDesc}} = data.wpPost;
   const categoryName = data.wpPost.categories.nodes[0].name;
   const image = data.wpPost.featuredImage.node.localFile.childImageSharp.gatsbyImageData
   console.log(image)
     return (
         <Layout>
-          <SEO title="post"/>
+          <SEO title={seoTitle} description={metaDesc}/>
           <div className={styles.container}>
             <h1 className={styles.title}>{title}</h1>
             <GatsbyImage image={image} className={styles.postImage}/>
@@ -51,6 +51,10 @@ export const query = graphql`
       slug
       excerpt
       content
+      seo {
+        title
+        metaDesc
+      }
     }
   }
 `

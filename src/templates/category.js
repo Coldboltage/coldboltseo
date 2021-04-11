@@ -10,10 +10,11 @@ import Pager from "../components/Pager"
 const Category = ({ data, pageContext }) => {
     const {allWpPost:{nodes:posts}} = data
     const image = data.allWpPost.nodes.featuredImage
-    const { wpCategory: { name, description } } = data
+    const { wpCategory: { name, description, seo:{metaDesc} } } = data
     console.log(pageContext)
     return (
         <Layout>
+          <SEO title={name} description={metaDesc}/>
             <div>
                 <div className={styles.hero}>
                     <div className={styles.heroText}>
@@ -36,6 +37,15 @@ query categories ($skip: Int!, $limit: Int!) {
     wpCategory(slug: {eq: "esports-seo"}) {
       name
       description
+      seo {
+        metaDesc
+      }
+    }
+    wpPage(slug: {eq: "esports-seo"}) {
+      title
+      seo {
+        metaDesc
+      }
     }
     allWpPost(
         filter: {categories: {nodes: {elemMatch: {slug: {eq: "esports-seo"}}}}}

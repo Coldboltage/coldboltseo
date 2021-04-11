@@ -11,9 +11,10 @@ const Category = ({ data }) => {
 
     const image = data.allWpPost.nodes.featuredImage
     console.log(data)
-    const { wpCategory: { name, description } } = data
+    const { wpCategory: { name, description, seo:{metaDesc} } } = data
     return (
         <Layout>
+          <SEO title={name} description={metaDesc}/>
             <div>
                 <div className={styles.hero}>
                     <div className={styles.heroText}>
@@ -35,6 +36,9 @@ query blogPage ($skip: Int!, $limit: Int!) {
     wpCategory(slug: {eq: "blog"}) {
       name
       description
+      seo {
+        metaDesc
+      }
     }
     allWpPost(
         filter: {categories: {nodes: {elemMatch: {slug: {eq: "blog"}}}}}
