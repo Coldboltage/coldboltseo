@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `ColdboltSEO`,
-    description: `ColdboltSEO is a place to find out anything and everything about Esports and SEO. The journey of Coldolt and his SEO is here.`,
+    description: `ColdboltSEO is a place to find out anything and everything about Esports and SEO. The journey of Coldolt and his SEO is.`,
     author: `@itscoldbolt`,
   },
   plugins: [
@@ -58,6 +58,8 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-netlify`,
+    
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

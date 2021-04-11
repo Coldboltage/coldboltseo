@@ -13,7 +13,7 @@ const { paginate } = require('gatsby-awesome-pagination');
 // Process to grab createPages. Needs to be Async as it takes time to get.
 exports.createPages = async ({ graphql, actions }) => {
     // Destructure to get create pages from action
-    const { createPage } = actions
+    const { createPage, createRedirect } = actions
     // Search for something unique as an identifier
     const result = await graphql(`
       query WordPressPosts {
@@ -74,6 +74,13 @@ exports.createPages = async ({ graphql, actions }) => {
         itemsPerPage: 6,
         pathPrefix: `/esports-seo`,
         component: path.resolve(`src/templates/category.js`)
+      })
+
+      // Creat redirects
+      createRedirect({
+        fromPath: "/category/blog/",
+        toPath: "/blog/",
+        isPermanent: true
       })
 
 }
