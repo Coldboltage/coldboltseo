@@ -25,21 +25,25 @@ const query = graphql`
 const Header = ({ siteTitle }) => {
 
   const visibleSetting = () => {
-    if (window.innerWidth < 660) {
-      return false
-    } else {
-      return true
+    if (typeof window !== "undefined") {
+      if (window.innerWidth < 660) {
+        return false
+      } else {
+        return true
+      }
     }
   }
 
   const barsSettings = () => {
-    if (window.innerWidth < 660) {
-      return true
-    } else {
-      return false
+    if (typeof window !== "undefined") {
+      if (window.innerWidth < 660) {
+        return true
+      } else {
+        return false
+      }
     }
   }
-  
+
 
 
   const [visible, setVisible] = useState(visibleSetting())
@@ -56,7 +60,7 @@ const Header = ({ siteTitle }) => {
   // }, [])
 
 
-  
+
   if (typeof window !== "undefined") {
     window.addEventListener("resize", () => {
       if (window.innerWidth < 660) {
