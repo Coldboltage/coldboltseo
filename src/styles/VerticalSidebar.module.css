@@ -1,0 +1,49 @@
+
+.navbar {
+    margin-right: 10px;
+}
+
+.menuBars {
+
+}
+
+/* NAVBAR */
+.navMenu {
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 350ms;
+    z-index: 100;
+}
+
+.navMenuItems {
+    justify-self:center;
+    align-self: center;
+}
+
+.active {
+    left: 0;
+    transition: 350ms;
+}
+
+.navMenuItems {
+    display: block;
+}
+
+.link {
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 32px;
+    padding-bottom: 20px;
+    color: #333;
+}
+
+.navbarToggle {
+    width: 100px;
+    font-size: 32px;
+}

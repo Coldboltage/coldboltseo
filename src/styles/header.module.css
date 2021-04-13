@@ -24,11 +24,15 @@ h2 {
 
 @media only screen and (max-width: 610px) {
     .containment {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .link {
         align-self: flex-start;
         padding-right: 0;
+    }
+
+    .navLinks {
+        display:none;
     }
 }
