@@ -57,7 +57,6 @@ const Header = ({ siteTitle }) => {
     <header>
       <div className={styles.containment}>
         <>
-          {barsVisible && <VerticalNavbar />}
           <Link className={styles.link} to="/" style={{ color: `white`, textDecoration: `none`, }}>
             <StaticImage
               src="../images/coldboltseologo-e1543939940324.png" 
@@ -66,6 +65,7 @@ const Header = ({ siteTitle }) => {
               formats={["AUTO", "AVIF", "WEBP"]}
             />
           </Link>
+          {barsVisible && <VerticalNavbar />}
         </>
         {visible ? <NavLinks pages={pages} socialLinks={socialLinks} /> : null}
       </div>
