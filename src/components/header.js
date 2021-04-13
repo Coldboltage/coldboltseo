@@ -60,7 +60,8 @@ const Header = ({ siteTitle }) => {
           {barsVisible && <VerticalNavbar />}
           <Link className={styles.link} to="/" style={{ color: `white`, textDecoration: `none`, }}>
             <StaticImage
-              src="../images/coldboltseologo-e1543939940324.png"
+              src="../images/coldboltseologo-e1543939940324.png" 
+              placeholder="blurred"
               quality={50}
               formats={["AUTO", "AVIF", "WEBP"]}
             />
