@@ -59,7 +59,8 @@ const Header = ({ siteTitle }) => {
         <>
           <Link className={styles.link} to="/" style={{ color: `white`, textDecoration: `none`, }}>
             <StaticImage
-              src="../images/coldboltseologo-e1543939940324.png" 
+              src="../images/coldboltseologo-e1543939940324.png"
+              width={166} 
               placeholder="blurred"
               quality={50}
               formats={["AUTO", "AVIF", "WEBP"]}
