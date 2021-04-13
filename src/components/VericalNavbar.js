@@ -17,9 +17,7 @@ const VericalNavbar = () => {
         <div onClick={(e) => {
             if(e.target.localName === "div" || e.target.localName === "li") {
                 setSidebar()
-            } else {
-                console.log(e)
-            }
+            } 
         }}>
             <div className={styles.navbar}>
                 <Link to="#" className={styles.menuBars}>
