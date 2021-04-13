@@ -3,6 +3,12 @@
     display: flex;
     list-style-type: none;
     margin: 0;
+    align-self: center;
+    align-items: center;
+}
+
+.list li {
+    margin: 0;
 }
 
 li {
@@ -30,3 +36,4 @@ li:hover {
 .footer {
     justify-content:center;
 }
+
