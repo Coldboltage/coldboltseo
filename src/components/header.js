@@ -23,19 +23,40 @@ const query = graphql`
 `
 
 const Header = ({ siteTitle }) => {
-  const [visible, setVisible] = useState(false)
-  const [barsVisible, setBarsVisble] = useState(true)
 
-  useEffect(() => {
+  const visibleSetting = () => {
     if (window.innerWidth < 660) {
-      setVisible(false)
-      setBarsVisble(true)
+      return false
     } else {
-      setVisible(true)
-      setBarsVisble(false)
+      return true
     }
-  }, [])
+  }
 
+  const barsSettings = () => {
+    if (window.innerWidth < 660) {
+      return true
+    } else {
+      return false
+    }
+  }
+  
+
+
+  const [visible, setVisible] = useState(visibleSetting())
+  const [barsVisible, setBarsVisble] = useState(barsSettings())
+
+  // useEffect(() => {
+  //   if (window.innerWidth < 660) {
+  //     setVisible(false)
+  //     setBarsVisble(true)
+  //   } else {
+  //     setVisible(true)
+  //     setBarsVisble(false)
+  //   }
+  // }, [])
+
+
+  
   if (typeof window !== "undefined") {
     window.addEventListener("resize", () => {
       if (window.innerWidth < 660) {
