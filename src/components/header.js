@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import * as styles from "../styles/header.module.css"
@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => {
   const [barsVisible, setBarsVisble] = useState(true)
 
   useEffect(() => {
-    if(window.innerWidth < 611) {
+    if (window.innerWidth < 611) {
       setVisible(false)
       setBarsVisble(true)
     } else {
@@ -36,15 +36,17 @@ const Header = ({ siteTitle }) => {
     }
   }, [])
 
-  window.addEventListener("resize", () => {
-    if(window.innerWidth < 611) {
-      setVisible(false)
-      setBarsVisble(true)
-    } else {
-      setVisible(true)
-      setBarsVisble(false)
-    }
-  })
+  if (typeof window !== "undefined") {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth < 611) {
+        setVisible(false)
+        setBarsVisble(true)
+      } else {
+        setVisible(true)
+        setBarsVisble(false)
+      }
+    })
+  }
 
   const data = useStaticQuery(query)
   const { allWpPage: { nodes: pages } } = data
@@ -64,7 +66,7 @@ const Header = ({ siteTitle }) => {
             />
           </Link>
         </>
-        {visible ? <NavLinks pages={pages} socialLinks={socialLinks} /> : null }
+        {visible ? <NavLinks pages={pages} socialLinks={socialLinks} /> : null}
       </div>
     </header>
   )
