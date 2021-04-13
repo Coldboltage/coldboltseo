@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => {
   const [barsVisible, setBarsVisble] = useState(true)
 
   useEffect(() => {
-    if (window.innerWidth < 611) {
+    if (window.innerWidth < 660) {
       setVisible(false)
       setBarsVisble(true)
     } else {
@@ -38,7 +38,7 @@ const Header = ({ siteTitle }) => {
 
   if (typeof window !== "undefined") {
     window.addEventListener("resize", () => {
-      if (window.innerWidth < 611) {
+      if (window.innerWidth < 660) {
         setVisible(false)
         setBarsVisble(true)
       } else {
@@ -60,10 +60,11 @@ const Header = ({ siteTitle }) => {
           <Link className={styles.link} to="/" style={{ color: `white`, textDecoration: `none`, }}>
             <StaticImage
               src="../images/coldboltseologo-e1543939940324.png"
-              width={166} 
-              placeholder="blurred"
-              quality={50}
+              width={200}
+              quality={32}
+              layout="fixed"
               formats={["AUTO", "AVIF", "WEBP"]}
+
             />
           </Link>
           {barsVisible && <VerticalNavbar />}
