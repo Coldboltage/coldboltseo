@@ -4,7 +4,8 @@
 }
 
 .menuBars {
-    color: #333
+    color: #333;
+    text-align: center;
 }
 
 /* NAVBAR */
@@ -24,15 +25,14 @@
 .navMenuItems {
     justify-self:center;
     align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .active {
     left: 0;
     transition: 350ms;
-}
-
-.navMenuItems {
-    display: block;
 }
 
 .link {
@@ -41,6 +41,8 @@
     font-size: 32px;
     padding-bottom: 20px;
     color: #333;
+    text-align: center;
+    align-self: center;
 }
 
 .navbarToggle {
