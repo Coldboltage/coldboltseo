@@ -23,7 +23,7 @@ const query = graphql`
 `
 
 const Header = ({ siteTitle }) => {
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(false)
   const [barsVisible, setBarsVisble] = useState(true)
 
   useEffect(() => {

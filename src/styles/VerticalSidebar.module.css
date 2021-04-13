@@ -4,7 +4,7 @@
 }
 
 .menuBars {
-
+    color: #333
 }
 
 /* NAVBAR */
@@ -46,4 +46,9 @@
 .navbarToggle {
     width: 100px;
     font-size: 32px;
+    color: #333;
+}
+
+.color {
+    color: #333;
 }
