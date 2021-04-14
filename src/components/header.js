@@ -27,9 +27,6 @@ const Header = ({ siteTitle }) => {
   const [visible, setVisible] = useState(visibleSetting())
   const [barsVisible, setBarsVisble] = useState(barsSettings())
 
-  let visible = true;
-  let barsVisible = false
-
   const visibleSetting = () => {
     if (typeof window !== "undefined") {
       if (window.innerWidth < 660) {
