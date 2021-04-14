@@ -7,20 +7,20 @@ import { StaticImage } from "gatsby-plugin-image"
 import socialLinks from "../constants/socialLinks"
 import VerticalNavbar from "../components/VericalNavbar"
 
-const query = graphql`
-  {
-    allWpPost {
-      nodes {
-        link
-      }
-    }
-    allWpPage {
-      nodes {
-        title
-      }
-    }
-  }
-`
+// const query = graphql`
+//   {
+//     allWpPost {
+//       nodes {
+//         link
+//       }
+//     }
+//     allWpPage {
+//       nodes {
+//         title
+//       }
+//     }
+//   }
+// `
 
 const Header = ({ siteTitle }) => {
 
@@ -44,8 +44,8 @@ const Header = ({ siteTitle }) => {
     }
   }
 
-  const [visible, setVisible] = useState(visibleSetting())
-  const [barsVisible, setBarsVisble] = useState(barsSettings())
+  const [visible, setVisible] = useState(window.innerWidth > 660)
+  const [barsVisible, setBarsVisble] = useState(window.innerWidth < 660)
 
   // useEffect(() => {
   //   if (window.innerWidth < 660) {
@@ -59,23 +59,21 @@ const Header = ({ siteTitle }) => {
 
 
 
-  // if (typeof window !== "undefined") {
-  //   window.addEventListener("resize", () => {
-  //     if (window.innerWidth < 660) {
-  //       setVisible(false)
-  //       setBarsVisble(true)
-  //     } else {
-  //       setVisible(true)
-  //       setBarsVisble(false)
-  //     }
-  //   })
-  // }
+  if (typeof window !== "undefined") {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth < 660) {
+        setVisible(false)
+        setBarsVisble(true)
+      } else {
+        setVisible(true)
+        setBarsVisble(false)
+      }
+    })
+  }
 
-  const data = useStaticQuery(query)
-  const { allWpPage: { nodes: pages } } = data
-  const links = pages.link
-
-  console.log(pages)
+  // const data = useStaticQuery(query)
+  // const { allWpPage: { nodes: pages } } = data
+  // const links = pages.link
   return (
     <header>
       <div className={styles.containment}>
@@ -92,7 +90,7 @@ const Header = ({ siteTitle }) => {
           </Link>
           {barsVisible && <VerticalNavbar />}
         </>
-        {visible ? <NavLinks pages={pages} socialLinks={socialLinks} /> : null}
+        {visible ? <NavLinks socialLinks={socialLinks} /> : null}
       </div>
     </header>
   )

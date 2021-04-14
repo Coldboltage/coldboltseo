@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import * as styles from "../styles/navLinks.module.css"
 import linkList from "../constants/links"
 
-const NavLinks = ({ pages, socialLinks , footer}) => {
+const NavLinks = ({ socialLinks , footer}) => {
     console.log(footer)
     return (
         <div className={`${styles.space} ${footer && (styles.footer)}`}>
@@ -20,7 +20,7 @@ const NavLinks = ({ pages, socialLinks , footer}) => {
             {/* {socialLinks && <p className={styles.hello}>Hi</p>} */}
             {socialLinks && (
                 <ul className={`${styles.list}`} >
-                    {socialLinks.map((socialLink, index) => {
+                    {socialLinks.map((socialLink) => {
                         return (
                             <li key={socialLink.id}>
                                 <a href={socialLink.url}>
