@@ -89,7 +89,6 @@ const Header = ({ siteTitle }) => {
               placeholder="dominantColor"
               width={200}
               quality={40}
-              layout="fixed"
               formats={["AUTO", "AVIF", "WEBP"]}
 
             />
