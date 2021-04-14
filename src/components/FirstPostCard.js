@@ -17,7 +17,7 @@ const FirstPostCard = ({ image, data }) => {
             </Link>
             <div className={styles.innerContainer}>
                 <div className={styles.taxomonies}>
-                    <span><Link className={styles.link} to={`/${slug}`}>{name}</Link></span><span> - </span><Link className={styles.date} to={`/${name}`}>{date}</Link>
+                    <span><Link className={styles.link} to={`/${slug}`}>{name}</Link></span><span> - </span><Link className={styles.date} to={`/${slug}`}>{date}</Link>
                 </div>
                 <h3>{title}</h3>
                 <div dangerouslySetInnerHTML={{ __html: excerpt }}></div>
