@@ -44,8 +44,6 @@ const Header = ({ siteTitle }) => {
     }
   }
 
-
-
   const [visible, setVisible] = useState(visibleSetting())
   const [barsVisible, setBarsVisble] = useState(barsSettings())
 
@@ -61,17 +59,17 @@ const Header = ({ siteTitle }) => {
 
 
 
-  if (typeof window !== "undefined") {
-    window.addEventListener("resize", () => {
-      if (window.innerWidth < 660) {
-        setVisible(false)
-        setBarsVisble(true)
-      } else {
-        setVisible(true)
-        setBarsVisble(false)
-      }
-    })
-  }
+  // if (typeof window !== "undefined") {
+  //   window.addEventListener("resize", () => {
+  //     if (window.innerWidth < 660) {
+  //       setVisible(false)
+  //       setBarsVisble(true)
+  //     } else {
+  //       setVisible(true)
+  //       setBarsVisble(false)
+  //     }
+  //   })
+  // }
 
   const data = useStaticQuery(query)
   const { allWpPage: { nodes: pages } } = data
