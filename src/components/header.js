@@ -24,9 +24,6 @@ const query = graphql`
 
 const Header = ({ siteTitle }) => {
 
-  const [visible, setVisible] = useState(visibleSetting())
-  const [barsVisible, setBarsVisble] = useState(barsSettings())
-
   const visibleSetting = () => {
     if (typeof window !== "undefined") {
       if (window.innerWidth < 660) {
@@ -46,6 +43,10 @@ const Header = ({ siteTitle }) => {
       }
     }
   }
+
+  const [visible, setVisible] = useState(visibleSetting())
+  const [barsVisible, setBarsVisble] = useState(barsSettings())
+
 
   // useEffect(() => {
   //   if (window.innerWidth < 660) {
