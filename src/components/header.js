@@ -78,7 +78,7 @@ const Header = ({ siteTitle }) => {
 
   console.log(pages)
   return (
-    <header>
+    <header className={styles.headerHeight}>
       <div className={styles.containment}>
         <>
           <Link className={styles.link} to="/" style={{ color: `white`, textDecoration: `none`, }}>
@@ -86,7 +86,7 @@ const Header = ({ siteTitle }) => {
               src="../images/coldboltseologo-e1543939940324.png"
               placeholder="dominantColor"
               width={200}
-              quality={40}
+              quality={50}
               formats={["AUTO", "AVIF", "WEBP"]}
             />
           </Link>
