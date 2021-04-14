@@ -17,6 +17,20 @@ exports.createPages = async ({ graphql, actions }) => {
     // Search for something unique as an identifier
     const result = await graphql(`
       query WordPressPosts {
+        blogPosts:allWpPost(
+          filter: {categories: {nodes: {elemMatch: {slug: {eq: "blog"}}}}}
+        ) {
+          nodes {
+            slug
+          }
+        }
+        esportseo:allWpPost(
+          filter: {categories: {nodes: {elemMatch: {slug: {eq: "esports-seo"}}}}}
+        ) {
+          nodes {
+            slug
+          }
+        }
         allWpPost {
           nodes {
             slug
@@ -62,7 +76,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
       paginate({
         createPage,
-        items: result.data.allWpCategory.nodes,
+        items: result.data.blogPosts.nodes,
         itemsPerPage: 6,
         pathPrefix: `/blog`,
         component: path.resolve(`src/templates/blog.js`)
@@ -70,13 +84,13 @@ exports.createPages = async ({ graphql, actions }) => {
 
       paginate({
         createPage,
-        items: result.data.allWpCategory.nodes,
+        items: result.data.esportseo.nodes,
         itemsPerPage: 6,
         pathPrefix: `/esports-seo`,
         component: path.resolve(`src/templates/category.js`)
       })
 
       // Create redirects
-      // createRedirect({ fromPath: "/category/blog/", toPath: "/blog/", isPermanent: true })
-      // createRedirect({ fromPath: "/category/esports-seo/", toPath: "/esports-seo/", isPermanent: true })
+      createRedirect({ fromPath: "/category/blog/", toPath: "/blog/", isPermanent: true })
+      createRedirect({ fromPath: "/category/esports-seo/", toPath: "/esports-seo/", isPermanent: true })
 }
