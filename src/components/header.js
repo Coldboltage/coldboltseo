@@ -24,28 +24,28 @@ import VerticalNavbar from "../components/VericalNavbar"
 
 const Header = ({ siteTitle }) => {
 
-  const visibleSetting = () => {
-    if (typeof window !== "undefined") {
-      if (window.innerWidth < 660) {
-        return false
-      } else {
-        return true
-      }
-    }
-  }
+  // const visibleSetting = () => {
+  //   if (typeof window !== "undefined") {
+  //     if (window.innerWidth < 660) {
+  //       return false
+  //     } else {
+  //       return true
+  //     }
+  //   }
+  // }
 
-  const barsSettings = () => {
-    if (typeof window !== "undefined") {
-      if (window.innerWidth < 660) {
-        return true
-      } else {
-        return false
-      }
-    }
-  }
+  // const barsSettings = () => {
+  //   if (typeof window !== "undefined") {
+  //     if (window.innerWidth < 660) {
+  //       return true
+  //     } else {
+  //       return false
+  //     }
+  //   }
+  // }
 
-  const [visible, setVisible] = useState(window.innerWidth > 660)
-  const [barsVisible, setBarsVisble] = useState(window.innerWidth < 660)
+  const [visible, setVisible] = useState()
+  const [barsVisible, setBarsVisble] = useState()
 
   // useEffect(() => {
   //   if (window.innerWidth < 660) {
