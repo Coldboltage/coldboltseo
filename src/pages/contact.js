@@ -3,13 +3,13 @@ import * as styles from "../styles/contact.module.css"
 import Layout from "../components/layout"
 import SidebarPosts from "../components/SidebarPosts"
 import { Link, graphql } from "gatsby"
-import SEO from "../components/seo"
+import seo from "../components/seo"
 
 const Contact = ({ data }) => {
   const { nodes: posts } = data.allWpPost
   return (
     <Layout>
-      <SEO title="Contact"></SEO>
+      <seo title="Contact"></seo>
       <div className={`${styles.container} ${styles.grid} ${styles.grid2}`}>
         <div>
           <h1>Contact me</h1>

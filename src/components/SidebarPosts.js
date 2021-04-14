@@ -1,8 +1,6 @@
 import React from 'react'
-import { graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 import * as styles from "../styles/sidebarPost.module.css"
-
-const data = [1, 2, 3, 4]
 
 const SidebarPosts = ({ posts }) => {
     return (

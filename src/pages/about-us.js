@@ -9,7 +9,7 @@ const About = ({data}) => {
     const {wpPage:{content, title, seo:{metaDesc}}} = data
     return (
         <Layout>
-          <SEO title={title} description={metaDesc}></SEO>
+          <SEO title={title} description={metaDesc}/>
             <div className={styles.container}>
             <StaticImage
               className={styles.alanImage}

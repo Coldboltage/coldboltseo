@@ -1,9 +1,6 @@
 import React from 'react'
-import { Link, graphql } from "gatsby"
-import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { Link } from "gatsby"
+import {  GatsbyImage } from "gatsby-plugin-image"
 import * as styles from "../styles/PostCard.module.css"
 
 const FirstPostCard = ({ image, data }) => {

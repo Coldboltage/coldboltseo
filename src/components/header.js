@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import * as styles from "../styles/header.module.css"
@@ -7,45 +7,48 @@ import { StaticImage } from "gatsby-plugin-image"
 import socialLinks from "../constants/socialLinks"
 import VerticalNavbar from "../components/VericalNavbar"
 
-// const query = graphql`
-//   {
-//     allWpPost {
-//       nodes {
-//         link
-//       }
-//     }
-//     allWpPage {
-//       nodes {
-//         title
-//       }
-//     }
-//   }
-// `
+const query = graphql`
+  {
+    allWpPost {
+      nodes {
+        link
+      }
+    }
+    allWpPage {
+      nodes {
+        title
+      }
+    }
+  }
+`
 
 const Header = ({ siteTitle }) => {
 
-  // const visibleSetting = () => {
-  //   if (typeof window !== "undefined") {
-  //     if (window.innerWidth < 660) {
-  //       return false
-  //     } else {
-  //       return true
-  //     }
-  //   }
-  // }
+  // const [visible, setVisible] = useState(visibleSetting())
+  // const [barsVisible, setBarsVisble] = useState(barsSettings())
 
-  // const barsSettings = () => {
-  //   if (typeof window !== "undefined") {
-  //     if (window.innerWidth < 660) {
-  //       return true
-  //     } else {
-  //       return false
-  //     }
-  //   }
-  // }
+  let visible = true;
+  let barsVisible = false
 
-  const [visible, setVisible] = useState()
-  const [barsVisible, setBarsVisble] = useState()
+  const visibleSetting = () => {
+    if (typeof window !== "undefined") {
+      if (window.innerWidth < 660) {
+        return false
+      } else {
+        return true
+      }
+    }
+  }
+
+  const barsSettings = () => {
+    if (typeof window !== "undefined") {
+      if (window.innerWidth < 660) {
+        return true
+      } else {
+        return false
+      }
+    }
+  }
 
   // useEffect(() => {
   //   if (window.innerWidth < 660) {
@@ -71,9 +74,11 @@ const Header = ({ siteTitle }) => {
   //   })
   // }
 
-  // const data = useStaticQuery(query)
-  // const { allWpPage: { nodes: pages } } = data
+  const data = useStaticQuery(query)
+  const { allWpPage: { nodes: pages } } = data
   // const links = pages.link
+
+  console.log(pages)
   return (
     <header>
       <div className={styles.containment}>
@@ -81,6 +86,7 @@ const Header = ({ siteTitle }) => {
           <Link className={styles.link} to="/" style={{ color: `white`, textDecoration: `none`, }}>
             <StaticImage
               src="../images/coldboltseologo-e1543939940324.png"
+              placeholder="dominantColor"
               width={200}
               quality={40}
               layout="fixed"
@@ -90,7 +96,7 @@ const Header = ({ siteTitle }) => {
           </Link>
           {barsVisible && <VerticalNavbar />}
         </>
-        {visible ? <NavLinks socialLinks={socialLinks} /> : null}
+        {visible ? <NavLinks pages={pages} socialLinks={socialLinks} /> : null}
       </div>
     </header>
   )

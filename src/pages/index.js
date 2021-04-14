@@ -1,6 +1,5 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
-import { getImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby"
 import FirstPostCard from "../components/FirstPostCard"
 import PostCard from "../components/PostCard"
 import Layout from "../components/layout"
