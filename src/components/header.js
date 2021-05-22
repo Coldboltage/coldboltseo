@@ -86,7 +86,7 @@ const Header = ({ siteTitle }) => {
               src="../images/coldboltseologo-e1543939940324.png"
               placeholder="dominantColor"
               width={200}
-              quality={50}
+              quality={70}
               formats={["AUTO", "AVIF", "WEBP"]}
             />
           </Link>

@@ -11,12 +11,17 @@ export default [
     },
     {
         id: 3,
-        text: "Contact",
-        url: "/contact/"
+        text: "About Us",
+        url: "/about-us/"
     },
     {
         id: 4,
-        text: "About Us",
-        url: "/about-us/"
-    }
+        text: "Services",
+        url: "/services"
+    },
+    {
+        id: 5,
+        text: "Contact",
+        url: "/contact/"
+    },
 ]
