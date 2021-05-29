@@ -10,11 +10,13 @@ import {GatsbyImage} from "gatsby-plugin-image"
 const Post = ({data}) => {
   const {content, date, excerpt, slug, title, seo:{title:seoTitle,metaDesc}} = data.wpPost;
   const categoryName = data.wpPost.categories.nodes[0].name;
-  const image = data.wpPost.featuredImage.node.localFile.childImageSharp.gatsbyImageData
+  const image = data.wpPost.featuredImage.node.localFile.childImageSharp.gatsbyImageData;
+  const imageSrc = image.images.fallback.src;
+  const twitterImage = `coldboltseo.com${imageSrc}`
   console.log(image)
     return (
         <Layout>
-          <SEO title={seoTitle} description={metaDesc}/>
+          <SEO title={seoTitle} description={metaDesc} twitterImage={twitterImage}/>
           <div className={styles.container}>
             <h1 className={styles.title}>{title}</h1>
             <GatsbyImage image={image} className={styles.postImage}/>

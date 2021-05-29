@@ -11,7 +11,6 @@ const PostCard = ({ image, posts, grid }) => {
                 const { categories, date, title, excerpt, slug } = post
                 const name = categories.nodes[0].name
                 const image = post.featuredImage.node.localFile.childImageSharp.gatsbyImageData
-                console.log()
                 return (
                     <div className={`${styles.card} ${styles.innerContainer}`} key={index}>
                         <div>
