@@ -12,7 +12,7 @@ const Post = ({data}) => {
   const categoryName = data.wpPost.categories.nodes[0].name;
   const image = data.wpPost.featuredImage.node.localFile.childImageSharp.gatsbyImageData;
   const imageSrc = image.images.fallback.src;
-  const twitterImage = `coldboltseo.com${imageSrc}`
+  const twitterImage = `https://coldboltseo.com${imageSrc}`
   console.log(image)
     return (
         <Layout>
