@@ -53,6 +53,10 @@ function SEO({ description, lang, meta, title, twitterImage }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: twitterImage,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
@@ -71,7 +75,7 @@ function SEO({ description, lang, meta, title, twitterImage }) {
         {
           name: "twitter:image",
           content: twitterImage || "",
-        },
+        }
       ].concat(meta)}
     />
   )
