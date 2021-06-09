@@ -8,8 +8,8 @@ const FirstPostCard = ({ image, data }) => {
     const name = categories.nodes[0].name
     console.log(categories.nodes[0].name)
     return (
-        <Link to={`/${slug}`} className={styles.firstCard}>
-            <div class={styles.firstCardStyles}>
+        <Link to={`/${slug}`} className={styles.anchorStyles}>
+            <div class={styles.firstCard}>
                 <Link to={`/${slug}`}>
                     <GatsbyImage className={styles.firstImage} image={image} alt="first post" />
                 </Link>
