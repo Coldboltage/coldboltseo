@@ -12,8 +12,8 @@ const PostCard = ({ image, posts, grid }) => {
                 const name = categories.nodes[0].name
                 const image = post.featuredImage.node.localFile.childImageSharp.gatsbyImageData
                 return (
-                    <Link to={`/${slug}`} className={`${styles.card} ${styles.innerContainer} ${styles.anchorStyles}`} key={index}>
-                            <div>
+                    <Link to={`/${slug}`} className={`${styles.innerContainer} ${styles.anchorStyles}`} key={index}>
+                            <div className={styles.card}>
                                 <Link to={`/${slug}`}>
                                     <GatsbyImage className={styles.postImage} image={image} alt="first post" />
                                 </Link>

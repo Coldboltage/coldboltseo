@@ -17,6 +17,9 @@
     grid-template-columns: 1fr 1fr;
     gap: 40px;
 }
+.anchorStyles {
+    text-decoration: none;
+}
 
 .card {
     padding-bottom: 20px;
@@ -31,7 +34,6 @@
     text-decoration: none;
     color: #333;
     /* padding-bottom: 50px; */
-
 }
 
 .firstCardStyles {
