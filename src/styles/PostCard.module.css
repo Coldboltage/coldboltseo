@@ -30,14 +30,14 @@
 .firstCard{
     text-decoration: none;
     color: #333;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
 
 }
 
 .firstCardStyles {
     border-bottom: 1px dotted #aaa;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    /* padding-bottom: 20px; */
+    /* margin-bottom: 20px; */
 }
 
 .card:hover {

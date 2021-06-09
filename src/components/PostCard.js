@@ -12,8 +12,7 @@ const PostCard = ({ image, posts, grid }) => {
                 const name = categories.nodes[0].name
                 const image = post.featuredImage.node.localFile.childImageSharp.gatsbyImageData
                 return (
-                    <Link to={`/${slug}`} className={`${styles.card} ${styles.innerContainer}`} key={index}>
-                        <div>
+                    <Link to={`/${slug}`} className={`${styles.card} ${styles.innerContainer} ${styles.anchorStyles}`} key={index}>
                             <div>
                                 <Link to={`/${slug}`}>
                                     <GatsbyImage className={styles.postImage} image={image} alt="first post" />
@@ -27,7 +26,6 @@ const PostCard = ({ image, posts, grid }) => {
                                 <div className={styles.excerpt} dangerouslySetInnerHTML={{ __html: excerpt }}></div>
                             </div>
                             {/* <Link to={`/${slug}`}>Read more</Link> */}
-                        </div>
                     </Link>
 
                 )
