@@ -1,11 +1,11 @@
 .firstImage {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     height: 500px;
     border-radius: 5px;
 }
 
 .innerContainer {
-    width: 95%;
+    width: 98%;
     margin: 0 auto;
 }
 
@@ -27,9 +27,23 @@
     text-decoration: none;
 }
 
+.firstCard{
+    text-decoration: none;
+    color: #333;
+    padding-bottom: 50px;
+
+}
+
+.firstCardStyles {
+    border-bottom: 1px dotted #aaa;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
 .card:hover {
     transform: scale(1.01);
-    transition: 0.7s;
+    /* background-color: #fff; */
+    transition: 0.3s;
 }
 
 .card .excerpt{
