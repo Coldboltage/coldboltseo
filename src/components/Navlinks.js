@@ -11,7 +11,7 @@ const NavLinks = ({ socialLinks , footer}) => {
                 {linkList.map((link, index) => {
                     const { text, url } = link
                     return (
-                        <li className={styles.hello}>
+                        <li className={styles.hello} key={index}>
                             <Link style={{ textDecoration: "none", color: "#333" }} to={url}>{text}</Link>
                         </li>
                     )

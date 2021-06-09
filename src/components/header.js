@@ -88,6 +88,7 @@ const Header = ({ siteTitle }) => {
               width={200}
               quality={70}
               formats={["AUTO", "AVIF", "WEBP"]}
+              alt="logo"
             />
           </Link>
           {barsVisible && <VerticalNavbar />}

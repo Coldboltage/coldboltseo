@@ -13,19 +13,15 @@ const PostCard = ({ image, posts, grid }) => {
                 const image = post.featuredImage.node.localFile.childImageSharp.gatsbyImageData
                 return (
                     <Link to={`/${slug}`} className={`${styles.innerContainer} ${styles.anchorStyles}`} key={index}>
-                            <div className={styles.card}>
-                                <Link to={`/${slug}`}>
-                                    <GatsbyImage className={styles.postImage} image={image} alt="first post" />
-                                </Link>
-                                <div className={styles.taxomonies}>
-                                    <span><Link className={styles.link} to={`/${slug}`}>{name}</Link></span><span> - </span><Link className={styles.date} to={`/${name}`}>{date}</Link>
-                                </div>
-                                <Link className={styles.titleLink} to={`/${slug}`}>
-                                    <h3 className={styles.title}>{title}</h3>
-                                </Link>
-                                <div className={styles.excerpt} dangerouslySetInnerHTML={{ __html: excerpt }}></div>
+                        <div className={styles.card}>
+                            <GatsbyImage className={styles.postImage} image={image} alt="" />
+                            <div className={styles.taxomonies}>
+                                <span className={styles.link}>{name}</span><span> - </span><span className={styles.date}>{date}</span>
                             </div>
-                            {/* <Link to={`/${slug}`}>Read more</Link> */}
+                            <h3 className={styles.title}>{title}</h3>
+                            <div className={styles.excerpt} dangerouslySetInnerHTML={{ __html: excerpt }}></div>
+                        </div>
+                        {/* <Link to={`/${slug}`}>Read more</Link> */}
                     </Link>
 
                 )
