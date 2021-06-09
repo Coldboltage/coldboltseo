@@ -19,8 +19,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `ColdboltSEO`,
+        short_name: `CBSEO`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
@@ -28,6 +28,7 @@ module.exports = {
         icon: `src/images/pngwing.com.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-offline`,
     `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-source-wordpress`,
