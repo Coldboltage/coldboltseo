@@ -12,21 +12,24 @@ const PostCard = ({ image, posts, grid }) => {
                 const name = categories.nodes[0].name
                 const image = post.featuredImage.node.localFile.childImageSharp.gatsbyImageData
                 return (
-                    <div className={`${styles.card} ${styles.innerContainer}`} key={index}>
+                    <Link to={`/${slug}`} className={`${styles.card} ${styles.innerContainer}`} key={index}>
                         <div>
-                            <Link to={`/${slug}`}>
-                                <GatsbyImage className={styles.postImage} image={image} alt="first post" />
-                            </Link>
-                            <div className={styles.taxomonies}>
-                                <span><Link className={styles.link} to={`/${slug}`}>{name}</Link></span><span> - </span><Link className={styles.date} to={`/${name}`}>{date}</Link>
+                            <div>
+                                <Link to={`/${slug}`}>
+                                    <GatsbyImage className={styles.postImage} image={image} alt="first post" />
+                                </Link>
+                                <div className={styles.taxomonies}>
+                                    <span><Link className={styles.link} to={`/${slug}`}>{name}</Link></span><span> - </span><Link className={styles.date} to={`/${name}`}>{date}</Link>
+                                </div>
+                                <Link className={styles.titleLink} to={`/${slug}`}>
+                                    <h3 className={styles.title}>{title}</h3>
+                                </Link>
+                                <div className={styles.excerpt} dangerouslySetInnerHTML={{ __html: excerpt }}></div>
                             </div>
-                            <Link className={styles.titleLink} to={`/${slug}`}>
-                                <h3 className={styles.title}>{title}</h3>
-                            </Link>
-                            <div className={styles.excerpt} dangerouslySetInnerHTML={{ __html: excerpt }}></div>
+                            {/* <Link to={`/${slug}`}>Read more</Link> */}
                         </div>
-                        <Link to={`/${slug}`}>Read more</Link>
-                    </div>
+                    </Link>
+
                 )
             })}
         </div>

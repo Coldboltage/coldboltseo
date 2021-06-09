@@ -24,6 +24,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: scale(1.01);
+    transition: 0.7s;
+}
+
+.card .excerpt{
+    color: #000;
 }
 
 .postsGap {
