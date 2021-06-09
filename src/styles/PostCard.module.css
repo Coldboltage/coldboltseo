@@ -42,10 +42,8 @@
     text-decoration: none;
 }
 
-.firstCardStyles {
-    /* border-bottom: 1px dotted #aaa; */
-    /* padding-bottom: 20px; */
-    /* margin-bottom: 20px; */
+.firstCardTitle {
+    font-size: 25px;
 }
 
 .card:hover {
@@ -82,7 +80,7 @@
 }
 
 .date {
-    color: rgb(152, 152, 152);
+    color: rgb(39, 39, 39);
     text-decoration: none;
     text-transform: uppercase;
 }

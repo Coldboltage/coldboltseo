@@ -15,7 +15,7 @@ const FirstPostCard = ({ image, data }) => {
                     <div className={styles.taxomonies}>
                         <span className={styles.link}>{name}</span><span> - </span><span className={styles.date}>{date}</span>
                     </div>
-                    <h3>{title}</h3>
+                    <h2 className={styles.firstCardTitle}>{title}</h2>
                     <div dangerouslySetInnerHTML={{ __html: excerpt }}></div>
                     {/* <Link to={`/${slug}`}>Read more</Link> */}
                 </div>

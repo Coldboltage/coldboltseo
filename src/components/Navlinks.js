@@ -2,8 +2,9 @@ import React from 'react'
 import { Link } from "gatsby"
 import * as styles from "../styles/navLinks.module.css"
 import linkList from "../constants/links"
+import { StaticImage } from "gatsby-plugin-image"
 
-const NavLinks = ({ socialLinks , footer}) => {
+const NavLinks = ({ socialLinks, footer }) => {
     console.log(footer)
     return (
         <div className={`${styles.space} ${footer && (styles.footer)}`}>
@@ -23,7 +24,8 @@ const NavLinks = ({ socialLinks , footer}) => {
                     {socialLinks.map((socialLink) => {
                         return (
                             <li key={socialLink.id}>
-                                <a href={socialLink.url}>
+                                <a href={socialLink.url} title={socialLink.name}>
+                                    {/* <img src={socialLink.icon} alt={socialLink.name}></img> */}
                                     {socialLink.icon}
                                 </a>
                             </li>

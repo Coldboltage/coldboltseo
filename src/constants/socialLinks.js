@@ -5,13 +5,13 @@ import { FaTwitterSquare, FaGithubSquare} from "react-icons/fa";
 export default [
     {
         id: 1,
-        name: "twitter",
+        name: "Twitter",
         url: "https://twitter.com/itscoldbolt",
         icon: < FaTwitterSquare/>
     },
     {
         id: 2,
-        name: "github",
+        name: "Github",
         url: "https://github.com/Coldboltage/",
         icon: <FaGithubSquare/>
     }
