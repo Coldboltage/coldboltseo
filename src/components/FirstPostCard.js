@@ -6,7 +6,6 @@ import * as styles from "../styles/PostCard.module.css"
 const FirstPostCard = ({ image, data }) => {
     const { wpPost: { categories, date, title, excerpt, slug } } = data
     const name = categories.nodes[0].name
-    console.log(categories.nodes[0].name)
     return (
         <Link to={`/${slug}`} className={styles.anchorStyles}>
             <div className={styles.firstCard}>

@@ -5,7 +5,6 @@ import * as styles from "../styles/category.module.css"
 
 const Pager = ({pageContext}) => {
     const {previousPagePath, nextPagePath} = pageContext
-    console.log(nextPagePath)
     return (
         <div className={styles.pager}>
             {previousPagePath && (
