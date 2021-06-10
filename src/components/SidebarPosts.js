@@ -8,7 +8,6 @@ const SidebarPosts = ({ posts }) => {
             {posts.map((post, index) => {
                 const { slug, title, date, categories } = post
                 const catName = categories.nodes[0].name
-                console.log(catName)
                 return (
                     <Link to={`/${slug}`} className={styles.anchorStyles}>
                         <div key={index} className={styles.post}>
