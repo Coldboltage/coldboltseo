@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import FirstPostCard from "../components/FirstPostCard"
 import PostCard from "../components/PostCard"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import * as styles from "../styles/index.module.css"
 
 const IndexPage = ({ data }) => {
@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Home" description={data.wpPage.seo.metaDesc} />
+      <Seo title="Home" description={data.wpPage.seo.metaDesc} />
       <div className={styles.container}>
         <h1>Esports SEO advice for Esports and Gaming</h1>
         <p>Explaining what makes good SEO in Esports and Gaming.</p>

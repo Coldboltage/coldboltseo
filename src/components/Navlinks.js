@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from "gatsby"
 import * as styles from "../styles/navLinks.module.css"
 import linkList from "../constants/links"
-import { StaticImage } from "gatsby-plugin-image"
 
 const NavLinks = ({ socialLinks, footer }) => {
     console.log(footer)

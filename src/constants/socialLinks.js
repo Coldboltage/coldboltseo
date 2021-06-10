@@ -2,7 +2,7 @@ import React from 'react'
 import { FaTwitterSquare, FaGithubSquare} from "react-icons/fa";
 
 
-export default [
+const SocialLinks = [
     {
         id: 1,
         name: "Twitter",
@@ -16,3 +16,5 @@ export default [
         icon: <FaGithubSquare/>
     }
 ]
+
+export default SocialLinks

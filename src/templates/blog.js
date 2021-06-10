@@ -1,20 +1,16 @@
 import React from 'react'
 import Layout from "../components/layout"
-import { Link, graphql } from "gatsby"
-import SEO from "../components/seo"
+import {graphql } from "gatsby"
+import Seo from "../components/seo"
 import * as styles from "../styles/category.module.css"
-import { GatsbyImage } from "gatsby-plugin-image"
 import PostCard from "../components/PostCard"
 
 const Category = ({ data }) => {
     const {allWpPost:{nodes:posts}} = data
-
-    const image = data.allWpPost.nodes.featuredImage
-    console.log(data)
     const { wpCategory: { name, description, seo:{metaDesc} } } = data
     return (
         <Layout>
-          <SEO title={name} description={metaDesc}/>
+          <Seo title={name} description={metaDesc}/>
             <div>
                 <div className={styles.hero}>
                     <div className={styles.heroText}>

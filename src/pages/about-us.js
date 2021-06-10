@@ -3,13 +3,13 @@ import Layout from "../components/layout"
 import * as styles from "../styles/about.module.css"
 import { graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const About = ({data}) => {
     const {wpPage:{content, title, seo:{metaDesc}}} = data
     return (
         <Layout>
-          <SEO title={title} description={metaDesc}/>
+          <Seo title={title} description={metaDesc}/>
             <div className={styles.container}>
             <StaticImage
               className={styles.alanImage}

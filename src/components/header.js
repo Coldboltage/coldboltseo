@@ -78,7 +78,7 @@ const Header = ({ siteTitle }) => {
 
   console.log(pages)
   return (
-    <header className={styles.headerHeight}>
+    <header>
       <div className={styles.containment}>
         <>
           <Link className={styles.link} to="/" style={{ color: `white`, textDecoration: `none`, }}>

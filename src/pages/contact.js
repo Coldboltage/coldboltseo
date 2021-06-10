@@ -2,7 +2,7 @@ import React from 'react'
 import * as styles from "../styles/contact.module.css"
 import Layout from "../components/layout"
 import SidebarPosts from "../components/SidebarPosts"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import seo from "../components/seo"
 
 const Contact = ({ data }) => {
@@ -17,9 +17,9 @@ const Contact = ({ data }) => {
           <p>Twitter: <a href="https://twitter.com/itscoldbolt">https://twitter.com/itscoldbolt</a></p>
           <p>Discord: Coldbolt#6340</p>
           <p>If you wish to use the contact form below, you can be assured that I’ll follow up with you as soon as possible!</p>
-          <div className={styles.form}>
+          <div>
             <form action="https://formspree.io/f/xpzkzywn" method="POST">
-              <label className={styles.label} for="name">
+              <label className={styles.label} htmlfor="name">
                 Your name:
               </label>
               <div className={styles.input}>

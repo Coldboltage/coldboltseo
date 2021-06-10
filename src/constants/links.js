@@ -1,4 +1,4 @@
-export default [
+const Links = [
     {
         id: 1,
         text: "Esports SEO",
@@ -25,3 +25,5 @@ export default [
         url: "/contact/"
     },
 ]
+
+export default Links
