@@ -20,7 +20,7 @@ const VericalNavbar = () => {
             } 
         }}>
             <div className={styles.navbar}>
-                <Link to="#" className={styles.menuBars}>
+                <Link to="#" className={styles.menuBars} title="Vertical Navbar">
                     <FaBars onClick={showSidebar}/>
                 </Link>
             </div>
