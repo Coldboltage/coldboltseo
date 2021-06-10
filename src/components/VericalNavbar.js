@@ -20,16 +20,16 @@ const VericalNavbar = () => {
             } 
         }}>
             <div className={styles.navbar}>
-                <Link to="#" className={styles.menuBars} title="Vertical Navbar">
+                <a href="#" className={styles.menuBars} title="Vertical Navbar">
                     <FaBars onClick={showSidebar}/>
-                </Link>
+                </a>
             </div>
             <div className={sidebar ? `${styles.navMenu} ${styles.active}` : `${styles.navMenu}`}>
                 <ul className={`${styles.navMenuItems}`}>
                     <li className={`${styles.navbarToggle} ${styles.link}`}>
-                        <Link to="#" className={styles.menuBars} onClick={showSidebar}>
+                        <a href="#" className={styles.menuBars} onClick={showSidebar} title="Inner Close">
                             <IoClose />
-                        </Link>
+                        </a>
                     </li>
                     {links.map((link, index) => {
                         
