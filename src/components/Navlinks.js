@@ -4,7 +4,6 @@ import * as styles from "../styles/navLinks.module.css"
 import linkList from "../constants/links"
 
 const NavLinks = ({ socialLinks, footer }) => {
-    console.log(footer)
     return (
         <div className={`${styles.space} ${footer && (styles.footer)}`}>
             <ul className={styles.list}>

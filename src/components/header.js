@@ -75,8 +75,6 @@ const Header = ({ siteTitle }) => {
   const data = useStaticQuery(query)
   const { allWpPage: { nodes: pages } } = data
   // const links = pages.link
-
-  console.log(pages)
   return (
     <header>
       <div className={styles.containment}>
