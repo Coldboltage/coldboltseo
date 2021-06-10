@@ -10,12 +10,14 @@ const SidebarPosts = ({ posts }) => {
                 const catName = categories.nodes[0].name
                 console.log(catName)
                 return (
-                    <div key={index} className={styles.post}>
-                        <h5 className={styles.titleLink}>{title}</h5>
-                        <div className={styles.taxomonies}>
-                            <span><Link className={styles.link} to={`/${slug}`}>{catName}</Link></span><span> - </span><Link className={styles.date} to={`/${slug}`}>{date}</Link>
+                    <Link to={`/${slug}`} className={styles.anchorStyles}>
+                        <div key={index} className={styles.post}>
+                            <h5 className={styles.titleLink}>{title}</h5>
+                            <div className={styles.taxomonies}>
+                                <span className={styles.link}>{catName}</span><span> - </span><span className={styles.date} to={`/${slug}`}>{date}</span>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 )
             })}
         </div>

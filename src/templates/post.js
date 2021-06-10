@@ -8,7 +8,7 @@ import {GatsbyImage} from "gatsby-plugin-image"
 
 
 const Post = ({data}) => {
-  const {content, date, excerpt, slug, title, seo:{title:seoTitle,metaDesc}} = data.wpPost;
+  const {content, date, slug, title, seo:{title:seoTitle,metaDesc}} = data.wpPost;
   const categoryName = data.wpPost.categories.nodes[0].name;
   const image = data.wpPost.featuredImage.node.localFile.childImageSharp.gatsbyImageData;
   const imageSrc = image.images.fallback.src;

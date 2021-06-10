@@ -5,6 +5,7 @@ module.exports = {
     author: `@itscoldbolt`,
   },
   plugins: [
+    `gatsby-plugin-preact`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
@@ -20,7 +21,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `ColdboltSEO`,
-        short_name: `CBSEO`,
+        short_name: `ColdboltSEO`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
