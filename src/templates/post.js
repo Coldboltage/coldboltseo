@@ -8,7 +8,7 @@ import {GatsbyImage} from "gatsby-plugin-image"
 
 
 const Post = ({data}) => {
-  const {content, title, slug, seo:{title:seoTitle,metaDesc}} = data.wpPost;
+  const {content, schemaDate, title, slug, seo:{title:seoTitle,metaDesc}} = data.wpPost;
   const image = data.wpPost.featuredImage.node.localFile.childImageSharp.gatsbyImageData;
   const imageSrc = image.images.fallback.src;
   const twitterImage = `https://coldboltseo.com${imageSrc}`
@@ -34,7 +34,7 @@ const Post = ({data}) => {
         "url": "https://coldboltseo.com/static/addbbb878374d408719b768aec6ab155/5cef4/coldboltseologo-e1543939940324.avif"
       }
     },
-    "datePublished": "2021-06-12"
+    "datePublished": schemaDate,
   }
   console.log(image)
     return (
