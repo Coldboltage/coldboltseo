@@ -10,10 +10,18 @@ const IndexPage = ({ data }) => {
   const image = data.wpPost.featuredImage.node.localFile.childImageSharp.gatsbyImageData
   // data.allWpPost.nodes.shift()
   const posts = data.allWpPost.nodes
-
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ColdboltSEO",
+    "alternateName": "Coldbolt SEO",
+    "url": "https://coldboltseo.com",
+    "logo": "https://coldboltseo.com/static/addbbb878374d408719b768aec6ab155/5cef4/coldboltseologo-e1543939940324.avif",
+    "sameAs": "https://twitter.com/itscoldbolt"
+  }
   return (
     <Layout>
-      <Seo title="Home" description={data.wpPage.seo.metaDesc} />
+      <Seo title="Home" description={data.wpPage.seo.metaDesc} schemaMarkup={schema} />
       <div className={styles.container}>
         <h1>Esports SEO advice for Esports and Gaming</h1>
         <p>Explaining what makes good SEO in Esports and Gaming.</p>
