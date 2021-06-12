@@ -39,7 +39,7 @@ const Post = ({data}) => {
   console.log(image)
     return (
         <Layout>
-          <Seo title={seoTitle} description={metaDesc} twitterImage={twitterImage} schemaMarkup={schema}/>
+          <Seo title={seoTitle} description={metaDesc} twitterImage={twitterImage} schemaMarkup={schema} slug={slug}/>
           <div className={styles.container}>
             <h1 className={styles.title}>{title}</h1>
             <GatsbyImage image={image} className={styles.postImage}/>
