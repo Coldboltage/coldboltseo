@@ -8,10 +8,34 @@ import {GatsbyImage} from "gatsby-plugin-image"
 
 
 const Post = ({data}) => {
-  const {content, title, seo:{title:seoTitle,metaDesc}} = data.wpPost;
+  const {content, title, slug, seo:{title:seoTitle,metaDesc}} = data.wpPost;
   const image = data.wpPost.featuredImage.node.localFile.childImageSharp.gatsbyImageData;
   const imageSrc = image.images.fallback.src;
   const twitterImage = `https://coldboltseo.com${imageSrc}`
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://coldboltseo.com/${slug}`
+    },
+    "headline": title,
+    "description": metaDesc,
+    "image": `https://coldboltseo.com${imageSrc}`,  
+    "author": {
+      "@type": "Person",
+      "name": "Alan Reid"
+    },  
+    "publisher": {
+      "@type": "Organization",
+      "name": "ColdboltSEO",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://coldboltseo.com/static/addbbb878374d408719b768aec6ab155/5cef4/coldboltseologo-e1543939940324.avif"
+      }
+    },
+    "datePublished": "2021-06-12"
+  }
   console.log(image)
     return (
         <Layout>
@@ -48,6 +72,7 @@ export const query = graphql`
         }
       }
       date(formatString: "Do MMMM YYYY")
+      schemaDate:date(formatString: "YYYY-MM-DD")
       title
       slug
       excerpt
