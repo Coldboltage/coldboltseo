@@ -12,6 +12,7 @@ const Post = ({data}) => {
   const image = data.wpPost.featuredImage.node.localFile.childImageSharp.gatsbyImageData;
   const imageSrc = image.images.fallback.src;
   const twitterImage = `https://coldboltseo.com${imageSrc}`
+  const canonical = `https://coldboltseo.com/${slug}`;
   const schema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -39,7 +40,7 @@ const Post = ({data}) => {
   console.log(image)
     return (
         <Layout>
-          <Seo title={seoTitle} description={metaDesc} twitterImage={twitterImage} schemaMarkup={schema}/>
+          <Seo title={seoTitle} description={metaDesc} twitterImage={twitterImage} schemaMarkup={schema} canonical={canonical}/>
           <div className={styles.container}>
             <h1 className={styles.title}>{title}</h1>
             <GatsbyImage image={image} className={styles.postImage}/>
