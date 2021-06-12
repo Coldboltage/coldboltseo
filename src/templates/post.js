@@ -12,7 +12,6 @@ const Post = ({data}) => {
   const image = data.wpPost.featuredImage.node.localFile.childImageSharp.gatsbyImageData;
   const imageSrc = image.images.fallback.src;
   const twitterImage = `https://coldboltseo.com${imageSrc}`
-  const canonical = `https://coldboltseo.com/${slug}`;
   const schema = {
     "@context": "https://schema.org",
     "@type": "Article",
