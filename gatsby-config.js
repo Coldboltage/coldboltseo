@@ -66,7 +66,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify`,
-    `gatsby-plugin-force-trailing-slashes`,
     {
       resolve: `gatsby-plugin-react-helmet-canonical-urls`,
       options: {
