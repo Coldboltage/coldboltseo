@@ -42,7 +42,7 @@ function SEO({ description, lang, meta, title, twitterImage, schemaMarkup, slug 
         },
         {
           property: `og:url`,
-          content: `https://coldboltseo${slug}`
+          content: `https://coldboltseo/${slug}`
         },
         {
           property: `og:title`,

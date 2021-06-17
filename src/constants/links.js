@@ -2,17 +2,17 @@ const Links = [
     {
         id: 1,
         text: "Esports SEO",
-        url: "/esports-seo/"
+        url: "/esports-seo"
     },
     {
         id: 2,
         text: "Blog",
-        url: "/blog/"
+        url: "/blog"
     },
     {
         id: 3,
         text: "About Us",
-        url: "/about-us/"
+        url: "/about-us"
     },
     {
         id: 4,
@@ -22,7 +22,7 @@ const Links = [
     {
         id: 5,
         text: "Contact",
-        url: "/contact/"
+        url: "/contact"
     },
 ]
 

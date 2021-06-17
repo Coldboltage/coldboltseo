@@ -11,8 +11,7 @@ const Post = ({data}) => {
   const {content, schemaDate, title, slug, seo:{title:seoTitle,metaDesc}} = data.wpPost;
   const image = data.wpPost.featuredImage.node.localFile.childImageSharp.gatsbyImageData;
   const imageSrc = image.images.fallback.src;
-  // const twitterImage = `https://coldboltseo.com${imageSrc}`
-  const twitterImage = `${imageSrc}`
+  const twitterImage = `https://coldboltseo.com${imageSrc}`
   const schema = {
     "@context": "https://schema.org",
     "@type": "Article",
