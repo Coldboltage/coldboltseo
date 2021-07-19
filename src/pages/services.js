@@ -22,7 +22,6 @@ const Services = () => {
                 <h2 style={{fontSize: "20px"}}>What will happen to ColdboltSEO?</h2>
                 <p>Honestly, I'm not too sure. I want to make sure that I'm kept in the loop when it comes to all things SEO. I always want to help people out when it comes to showcasing their websites. The only issue I have is, this is an esports SEO website and as it is right now, I think it's best to move to another domain and build out another website from there. That's probably the best thing I can do for now. I'll post more about that in the future. </p>
                 <p>I do love GatsbyJS and using GraphQL. I learnt though now months ago, that I'm no where near as good as understanding a query language than I should. It's a good time to learn NextJS. I'm still to explore it but there's no doubt, it'll not be as good as GatsbyJS when it comes to performance. I'm still to learn where the uses of NextJS will come over GatsbyJS but for the most part, I don't think I need to care. We'll see what the future has to hold for me. I'll keep up with this blog but this site, ColdboltSEO, will stay up as a GatsbyJS website. We shall see what the future holds for this website. I still like the competitive nature of SEO in the end of the day.</p>
-
             </div>
         </Layout>
     )
